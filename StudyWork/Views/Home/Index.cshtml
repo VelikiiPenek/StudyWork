@@ -2,3 +2,42 @@
     ViewData["Title"] = "Подбор студентов";
 }
 <h1>Списки студентов: </h1>
+<div>
+      
+        @*<div>
+        Id: @item.ID_User
+        <br/>
+        Login: @item.Login
+            <br />
+        Password: @item.Password
+        </div>*@
+        <table border="1">
+            
+            <tr>
+                <th> Код студента </th>
+                <th> ФИО студента </th>
+                <th> Группа </th>
+                <th> Специализация </th>
+                <th> Почта </th>
+                <th>Действие</th>
+            </tr>
+        @foreach (var item in @Model)
+        {
+            <tr>
+                <td> @item.ID_Stud </td>
+
+
+                <td> @item.FIO_Stud </td>
+                <td> @item.Group </td>
+                <td> @item.Specialization </td>
+                <td> @item.Email </td>
+                <td> <input type="button" value="Подробнее"/> </td>
+                
+            </tr>
+            
+          
+            }
+        </table>
+    
+    
+</div>
