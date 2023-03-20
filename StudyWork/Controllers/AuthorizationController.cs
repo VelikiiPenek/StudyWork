@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿    using Microsoft.AspNetCore.Mvc;
+using StudyWork.Models;
 
 namespace StudyWork.Controllers
 {
@@ -8,5 +9,11 @@ namespace StudyWork.Controllers
         {
             return View();
         }
+
+        //[HttpPost]
+        //public IActionResult Check(Authorization authorization)
+        //{
+        //    if ( )
+        //}
     }
 }

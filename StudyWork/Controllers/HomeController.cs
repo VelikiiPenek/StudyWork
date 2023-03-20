@@ -54,7 +54,7 @@ namespace StudyWork.Controllers
             }
         }
 
-
+         
        public class Users
         {
             public int ID_User { get; set; }
@@ -95,7 +95,11 @@ namespace StudyWork.Controllers
 
             public string Company { get; set;}
 
-            public string FIO_Employer { get; set; }
+            public string FamiliaEm { get; set; }
+
+            public string NameEm { get; set; }
+            
+            public string OtchEm { get; set; }
 
         }
 
@@ -127,8 +131,12 @@ namespace StudyWork.Controllers
         public class stud
         {
             public int ID_Stud { get; set; }
-            public string FIO_Stud { get; set; }
-            public string Group { get; set; }
+            public string FamiliaStud { get; set; }
+
+            public string NameStud { get; set; }
+            public string OtchStud { get; set; }
+
+            public string Gr { get; set; }
             public string Specialization { get; set;}
             public string Email { get; set; }
         }
@@ -147,5 +155,25 @@ namespace StudyWork.Controllers
         {
             public int Individual_ID { get; set; }
         }
+
+
+        private List<role> GetRolesP ()
+        {
+            using (IDbConnection db = Connection)
+            {
+                var result = db.Query<role>("SELECT * FROM Role ;").ToList();
+                return result;
+            }
+
+
+        }
+
+
+        public class role
+        {
+            public int ID_Role { get; set; } 
+
+            public string Role { get; set; }
+
     }
 }

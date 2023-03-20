@@ -1,0 +1,35 @@
+﻿@model Registration
+@{
+    ViewData["Title"] = "Регистрация";
+}
+
+<form method="post" asp-controller="Reg" asp-action="Check">
+
+    <label asp-for="FIO"></label>
+    <input asp-for="FIO" />
+    <span asp-validation-for="FIO"></span>
+
+     <label asp-for="Login"></label>
+    <input asp-for="Login"/>
+    <span asp-validation-for="Login"></span>
+
+    <label asp-for="PassSt"></label>
+    <input asp-for="PassSt" />
+    <span asp-validation-for="PassSt"></span>
+
+    <label asp-for="PassSt2"></label>
+    <input asp-for="PassSt2" />
+    <span asp-validation-for="PassSt2"></span>
+
+    <label asp-for="Email"></label>
+    <input asp-for="Email" />
+    <span asp-validation-for="Email"></span>
+
+    <label asp-for="ProgLanguages"></label>
+    <input asp-for="ProgLanguages" />
+    <span asp-validation-for="ProgLanguages"></span>
+
+    <input type="submit" value="Зарегестрироваться" />
+    <a href="/first"> Назад </a>
+</form>
+

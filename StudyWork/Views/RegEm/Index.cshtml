@@ -1,0 +1,28 @@
+﻿@model Employer
+@{
+    ViewData["Title"] = "Регистрация руководителя";
+}
+<form method="post" asp-controller="RegEm" asp-action="Check">
+    <label asp-for="FIO"></label>
+    <input asp-for="FIO" />
+    <span asp-validation-for="FIO"></span>
+
+    <label asp-for="Company"></label>
+    <input asp-for="Company" />
+    <span asp-validation-for="Company"></span>
+
+    <label asp-for="LoginEm"></label>
+    <input asp-for="LoginEm" />
+    <span asp-validation-for="LoginEm"></span>
+
+    <label asp-for="PassEm"></label>
+    <input asp-for="PassEm" />
+    <span asp-validation-for="PassEm"></span>
+
+    <label asp-for="PassEm2"></label>
+    <input asp-for="PassEm2" />
+    <span asp-validation-for="PassEm2"></span>
+
+    <input type="submit" value="Зарегестрироваться" />
+    <a href="/"> Назад </a>
+</form>
