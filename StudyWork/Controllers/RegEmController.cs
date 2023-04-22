@@ -8,5 +8,11 @@ namespace StudyWork.Controllers
         {
             return View();
         }
+
+        public ActionResult Check()
+        {
+            return View();
+        }
+
     }
 }

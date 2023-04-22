@@ -5,10 +5,18 @@ namespace StudyWork.Models
 {
     public class Employer
     {
-        [Display(Name = "Введите ФИО ")]
+        [Display(Name = "Введите ваше имя")]
         //если мы хотим чтобы поле было обязательным для заполнения
         [Required(ErrorMessage = "Вам нужно ввести ФИО!")]
-        public string FIO { get; set; }
+        public string Name { get; set; }
+
+        [Display(Name = "Введите вашу фамилию")]
+        [Required(ErrorMessage = "Вам нужно ввести название компании!")]
+        public string Surname { get; set; }
+
+        [Display(Name = "Введите ваше отчество (при наличии)")]
+        [Required(ErrorMessage = "Вам нужно ввести название компании!")]
+        public string Otch { get; set; }
 
         [Display(Name = "Введите название компании")]
         [Required(ErrorMessage = "Вам нужно ввести название компании!")]

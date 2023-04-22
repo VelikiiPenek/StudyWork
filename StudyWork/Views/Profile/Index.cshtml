@@ -1,0 +1,29 @@
+﻿@model Profile
+@{
+    ViewData["Title"] = "Профиль";
+}
+
+<h1>Профиль</h1>
+<form method="post" asp-controller="Profile" asp-action="Check">
+    @*метод check отвечает за обработку данных поступающих из этой формы *@
+    <label asp-for="CheckNamePr"></label>
+    <input asp-for="CheckNamePr" />
+    <span asp-validation-for="CheckNamePr"></span>
+
+    <label asp-for="CheckSurnamePr"></label>
+    <input asp-for="CheckSurnamePr" />
+    <span asp-validation-for="CheckSurnamePr"></span>
+
+    <label asp-for="CheckOtchPr"></label>
+    <input asp-for="CheckOtchPr" />
+    <span asp-validation-for="CheckOtchPr"></span>
+
+    <label asp-for="CheckNameCompPr"></label>
+    <input asp-for="CheckNameCompPr" />
+    <span asp-validation-for="CheckNameCompPr"></span>
+
+    <input type="submit" value="Сохранить изменения" />
+    <input type="submit" value="Выйти" />
+    
+</form>
+

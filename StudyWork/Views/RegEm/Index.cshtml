@@ -3,9 +3,17 @@
     ViewData["Title"] = "Регистрация руководителя";
 }
 <form method="post" asp-controller="RegEm" asp-action="Check">
-    <label asp-for="FIO"></label>
-    <input asp-for="FIO" />
-    <span asp-validation-for="FIO"></span>
+    <label asp-for="Name"></label>
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span>
+
+    <label asp-for="Surname"></label>
+    <input asp-for="Surname" />
+    <span asp-validation-for="Surname"></span>
+
+    <label asp-for="Otch"></label>
+    <input asp-for="Otch" />
+    <span asp-validation-for="Otch"></span>
 
     <label asp-for="Company"></label>
     <input asp-for="Company" />
