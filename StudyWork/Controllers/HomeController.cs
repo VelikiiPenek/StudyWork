@@ -26,7 +26,7 @@ namespace StudyWork.Controllers
             {
                 return new SqlConnection(_config.GetConnectionString("DefaultConnection"));
             }
-        }
+        } 
 
         public IActionResult Index()
         {

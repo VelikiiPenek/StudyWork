@@ -2,8 +2,10 @@
     ViewData["Title"] = "Подбор студентов";
 }
 <h1>Списки студентов: </h1>
+<form method="post" asp-controller="Resume" asp-action="Check">
+
 <div>
-      
+     
         @*<div>
         Id: @item.ID_User
         <br/>
@@ -15,27 +17,30 @@
             
             <tr>
                 <th> Код студента </th>
-                <th> Фамилия студента </th>
+               @* <th> Фамилия студента </th>
                 <th> Имя студента </th>
                 <th> Отчество студента </th>
-                <th> Группа </th>
+                <th> Группа </th>*@
                 <th> Специализация </th>
-                <th> Почта </th>
-                <th>Действие</th>
+               @* <th> Почта </th>*@
+                <th> Резюме </th>
             </tr>
         @foreach (var item in @Model)
         {
-            <tr>
+            <tr  >
                 <td> @item.ID_Stud </td>
 
 
-                <td> @item.FamiliaStud </td>
+               @* <td> @item.FamiliaStud </td>
                 <td> @item.NameStud </td>
                 <td> @item.OtchStud </td>
-                <td> @item.Gr </td>
+                <td> @item.Gr </td>*@
                 <td> @item.Specialization </td>
-                <td> @item.Email </td>
-                <td> <input type="button" value="Подробнее"/> </td>
+                @*<td> @item.Email </td>*@
+                <td>
+
+                    <input type="submit" value="Подробнее                             ." />
+                </td>
                 
             </tr>
             
@@ -45,3 +50,4 @@
     
     
 </div>
+</form>
